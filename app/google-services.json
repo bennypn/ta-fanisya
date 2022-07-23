@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "867104369191",
+    "firebase_url": "https://ta-fanisya-yohana-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ta-fanisya-yohana",
+    "storage_bucket": "ta-fanisya-yohana.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867104369191:android:4fe6cfa761617920bebc02",
+        "android_client_info": {
+          "package_name": "com.example.ta_fanisya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "867104369191-e16os19190blta8sjdn32fu9drqg9vtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOmDRGOMilat0YuCk_zjNX-WfKMo6e4oM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "867104369191-e16os19190blta8sjdn32fu9drqg9vtu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
