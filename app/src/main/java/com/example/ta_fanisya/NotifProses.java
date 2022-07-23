@@ -26,13 +26,19 @@ public class NotifProses extends AppCompatActivity {
         bHome = findViewById(R.id.btnHome);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("transaksi").child("orderStatus");
+        DatabaseReference myRef = database.getReference("transaksi");
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Integer status = snapshot.getValue(Integer.class);
+                Integer status = snapshot.child("orderStatus").getValue(Integer.class);
+                Integer orderStatusCap = snapshot.child("cappucino").child("orderStatus").getValue(Integer.class);
+                Integer orderStatusKop = snapshot.child("kopisusu").child("orderStatus").getValue(Integer.class);
+                Integer orderStatusCok = snapshot.child("coklat").child("orderStatus").getValue(Integer.class);
                 if(status == 0){
                     Intent i = new Intent(NotifProses.this, Order.class);
+                    startActivity(i);
+                } else if (orderStatusCap == 2 || orderStatusKop == 2 || orderStatusCok == 2){
+                    Intent i = new Intent(NotifProses.this, WaitScreen.class);
                     startActivity(i);
                 }
             }
